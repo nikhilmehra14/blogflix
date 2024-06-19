@@ -8,7 +8,7 @@ async function signUp(req, res) {
     password,
   });
 
-  return res.redirect("/");
+  return res.redirect("/user/login");
 }
 
 async function logIn(req, res) {
