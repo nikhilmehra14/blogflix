@@ -13,7 +13,7 @@ async function signUp(req, res) {
     return res.redirect("/user/login");
   } catch (error) {
     if (error.code === 11000) {
-      return res.status(400).send("Email already exists.");
+      return res.render("signup", { error: "Email already exists." });
     }
     return res.status(500).send("Internal Server Error");
   }
