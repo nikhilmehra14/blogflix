@@ -1,4 +1,5 @@
 const User = require("../models/user");
+
 async function signUp(req, res) {
   const { fullName, email, password } = req.body;
 
@@ -8,6 +9,7 @@ async function signUp(req, res) {
       email,
       password,
     });
+
     return res.redirect("/user/login");
   } catch (error) {
     if (error.code === 11000) {
