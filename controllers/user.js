@@ -2,13 +2,19 @@ const User = require("../models/user");
 async function signUp(req, res) {
   const { fullName, email, password } = req.body;
 
-  await User.create({
-    fullName,
-    email,
-    password,
-  });
-
-  return res.redirect("/user/login");
+  try {
+    await User.create({
+      fullName,
+      email,
+      password,
+    });
+    return res.redirect("/user/login");
+  } catch (error) {
+    if (error.code === 11000) {
+      return res.status(400).send("Email already exists.");
+    }
+    return res.status(500).send("Internal Server Error");
+  }
 }
 
 async function logIn(req, res) {
