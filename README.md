@@ -71,7 +71,7 @@ We welcome contributions to improve Blogflix. To contribute, please follow these
 
 ## Contact
 
-For any questions or suggestions, please feel free to reach out at nikhilmehra821@example.com.
+For any questions or suggestions, please feel free to reach out at nikhilmehra821@gmail.com.
 
 ## Live Demo
 
